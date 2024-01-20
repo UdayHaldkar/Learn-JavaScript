@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Interval </title>
+</head>
+<body>
+    <h1>Set Interval</h1>
+  
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+</body>
+
+<script>
+    //setInterval is used to do certain operation after some interval of time
+    // setInterval(function(){
+    //     console.log("Uday", Date.now())
+    // },2000)
+
+    // const ineterval =function(){
+    //     console.log("Uday", Date.now())
+    // }
+
+    //  const interId = setInterval(ineterval,2000)
+    //  //clearInterval
+    //  clearInterval(interId)
+
+
+     
+     //integrated to buttons
+
+
+
+let intervalid 
+
+let startchanging =function(){
+    intervalid = setInterval(change,2000)
+
+    function change(){
+        console.log("Uday",Date.now());
+    }
+}
+
+
+let stopchanging = function(){
+    clearInterval(intervalid);
+    intervalid =null;
+}
+
+
+        document.querySelector('#start').addEventListener('click', startchanging);
+
+        document.querySelector('#stop').addEventListener('click', stopchanging);
+
+
+
+
+
+</script>
+</html>
